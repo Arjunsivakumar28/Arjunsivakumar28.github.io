@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Arjun Sivakumar</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a class="nav-anchor" href="#about">About</a></li>
+                    <li><a class="nav-anchor" href="#experiences">Experiences</a></li>
+                    <li><a class="nav-anchor" href="#projects">Projects</a></li>
+                    <li><a class="nav-anchor" href="#skills">Skills</a></li>
+                    <li><a class="nav-anchor" href="#contact">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to my personal website!</h2>
+            <p>Explore my projects and experiences and feel free to contact me</p>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>I am Arjun Sivakumar, an Engineering Physics undergraduate student
+            at the University of Illinois at Urbana-Champaign (UIUC), with a keen interest in computer science.
+            I am passionate about continuously expanding my knowledge and delving into various fields within the
+            realm of CS. My goal is to create impactful software solutions that tackle challenging everyday
+            problems.</p>
+    </section>
+
+    <!-- <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2</p>
+        </div>
+        Add more projects as needed 
+    </section> -->
+
+    <section id="experiences" class="container">
+        <h2>Experience</h2>
+        <div class="project" onclick="toggleDetails('exp')">
+            <div class="d-flex justify-content-between">
+                <h3>Full Stack Developer Intern</h3>
+                <h4 class="me-5" ><b>August 2023 - December 2023</b></h4>
+            </div>
+            <h4><i>Computer Solutions East Inc.</i></h4>
+            <button id="experience-details-btn" class="details-btn">&#9660;</button>
+            <div class="details" id="exp1">
+                <h6>During my internship at Computer Solutions East Inc., I was involved in the development
+                    of a web application under SCRUM management process. My responsibilities included:</h6>
+                <ul>
+                    <li>Designing and developing the web app using layered architecture </li>
+                    <li>Integrating QuickBooks data to implement 15+ features and perform reconciliations
+                        for 1900+ customer entities</li>
+                    <li>Utilizing SpringBoot to implement REST API architecture and OAuth2 authorization
+                        framework</li>
+                    <li>Ensuring secure processing of card and bank account transactions by tokenizing
+                        information and storing it in the database</li>
+                    <li>Optimizing backend systems and API calls to improve response times</li>
+                    <li>Designing and implementing user-friendly UI/UX components</li>
+                    <li>Conducting rigorous testing and debugging to ensure reliability and security</li>
+                    <li>Participating in code reviews and collaborating with DevOps team for deployment on
+                        Azure</li>
+                </ul>
+                <p>Tools used: React, Java, SpringBoot, Azure</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="project" onclick="toggleDetails('project1')">
+            <h3>Reverser Image Search Project</h3>
+            <button id="project-details-btn" class="details-btn">&#9660;</button>
+            <div class="details" id="project1">
+                <h6>I led a project to develop a Content-Based Image Retrieval System capable of
+                    accurately and efficiently retrieving photos from a local dataset based on user
+                    queries. Key highlights of the project include:</h6>
+                <ul>
+                    <li>Utilizing HSV color space histogram as an image descriptor to generate feature vectors</li>
+                    <li>Implementing chi-square distance calculation to compare feature vectors</li>
+                    <li>Iteratively improving precision and time efficiency by adjusting histogram bin values
+                        and identifying optimal image masks</li>
+                </ul>
+                <p>Tools used: Python, Spyder</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-content h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="carousel-content d-flex flex-column justify-content-center align-items-center">
+                        <h3>Project 2</h3>
+                        <p>Description of Project 2</p>
+                    </div>
+                </div>
+                <!-- Add more carousel items for additional projects -->
+    <!-- 
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <ol class="carousel-indicators">
+                <li data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#projectCarousel" data-bs-slide-to="1"></li>
+                <!-- Add more carousel indicators for additional projects -->
+    <!-- 
+            </ol>
+            <button id="pauseButton" class="btn btn-primary" onclick="toggleCarousel()">
+                <span id="carouselIcon" class="carousel-icon"></span>
+            </button>
+    
+        </div>
+    </section> -->
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <div class="skill">
+                <div class="skill-icon">Python</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">JavaScript</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">Java</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">C++</div>
+            </div>
+            <!-- Add more programming languages as needed -->
+        </div>
+        <div class="skill-category">
+            <h3>Web Development</h3>
+            <div class="skill">
+                <div class="skill-icon">HTML</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">CSS</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">JQuery</div>
+            </div>
+            <!-- Add more web development skills as needed -->
+        </div>
+        <div class="skill-category">
+            <h3>Frameworks</h3>
+            <div class="skill">
+                <div class="skill-icon">React</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">Node.js</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">Spring</div>
+            </div>
+            <!-- Add more frameworks as needed -->
+        </div>
+        <div class="skill-category">
+            <h3>Other</h3>
+            <div class="skill">
+                <div class="skill-icon">Git</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">Docker</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">MySQL</div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">Azure</div>
+            </div>
+            <!-- Add more other skills as needed -->
+        </div>
+    </section>
+
+    <section id="contact" class="container pt-0">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <a href="mailto:arjuns8@illinois.edu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" xml:space="preserve" 
+                    viewBox="0 0 128 128">
+                        <path fill="#282D33"
+                            d="m18.964 39.486 3.114 2.537L6.355 61.317 3.242 58.78zM108.846 39.248l15.915 19.53-3.114 2.538-15.915-19.53z" />
+                        <path fill="#282D33" d="M124.772 127.782H3.228V58.583h4.016v65.183h113.512V58.583h4.016z" />
+                        <path fill="#282D33"
+                            d="m39.474 93.194 2.697 2.974-35.106 31.831-2.697-2.974zM88.522 93.197l35.11 31.826-2.697 2.975-35.11-31.826z" />
+                        <path fill="#282D33"
+                            d="M87.802 95.657H40.199L19.11 74.101V0h89.782v74.101l-21.09 21.556zm-45.913-4.015h44.225l18.764-19.179V4.017H23.126v68.446l18.763 19.179z" />
+                        <path fill="#282D33"
+                            d="M64.548 72.013c-13.063 0-23.688-10.549-23.688-23.516 0-12.964 10.626-23.512 23.688-23.512 7.128 0 13.807 3.139 18.324 8.612l-3.097 2.558c-3.753-4.547-9.303-7.153-15.228-7.153-10.848 0-19.673 8.745-19.673 19.495 0 10.752 8.825 19.5 19.673 19.5 4.328 0 8.431-1.364 11.864-3.944l2.412 3.212c-4.134 3.105-9.07 4.748-14.275 4.748z" />
+                        <path fill="#282D33"
+                            d="M60.633 60.049c-.001 0 0 0 0 0-.929 0-1.912-.146-2.922-.434-3.041-.869-5.34-3.394-6.148-6.754-1.09-4.524.594-9.536 4.392-13.079 3.325-3.098 7.857-3.748 11.076-3.748 2.697 0 4.714.449 4.798.469l2.114.478-.636 2.071c-.161.52-3.928 12.771-4.598 14.684-1.388 3.952-4.407 6.313-8.076 6.313zm6.397-19.998c-2.497 0-5.97.463-8.338 2.669-3.275 3.056-3.814 6.757-3.226 9.201.473 1.963 1.692 3.36 3.347 3.832.65.186 1.263.28 1.819.28 2.49 0 3.705-1.973 4.285-3.628.477-1.356 2.703-8.549 3.855-12.282a21.628 21.628 0 0 0-1.742-.072z" />
+                        <path fill="#282D33"
+                            d="M73.686 59.837c-2.044 0-3.935-.698-5.44-2.057-3.11-2.806-.969-12.295.584-17.701l3.859 1.108c-1.72 5.996-2.536 12.504-1.713 13.653 1.489 1.338 3.39 1.078 4.712.617 3.032-1.055 6.506-4.528 7.283-9.13.561-3.326-.098-8.342-6.423-13.344l2.49-3.15c8.282 6.55 8.5 13.564 7.893 17.163-.93 5.506-5.01 10.545-9.923 12.255a10.099 10.099 0 0 1-3.322.586z" />
+                        <g>
+                            <path fill="#282D33"
+                                d="M86.428 95.657H41.573L4.743 60.165l2.786-2.892 35.664 34.369h41.615l35.664-34.369 2.787 2.892z" />
+                        </g>
+                    </svg>
+                </a>
+                <span class="ms-2"><a href="mailto:arjuns8@illinois.edu">arjuns8@illinois.edu</a></span>
+            </div>
+            <div class="contact-item">
+                <a href="tel:+2172000861">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                    </svg>
+                </a>
+                <span class="ms-2"><a href="tel:+12172000861">+1 (217) 200-0861</a></span>
+            </div>
+            <div class="contact-item">
+                <a href="https://www.linkedin.com/in/arjun-sivakumar28/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                    </svg>
+                </a>
+                <span class="ms-2"><a href="https://www.linkedin.com/in/arjun-sivakumar28/" target="_blank">Arjun Sivakumar</a></span>
+            </div>
+        </div>
+    </section>
+
+    <button id="scrollToTopBtn" class="scroll-btn">&#9650;</button>
+    <button id="scrollToBottomBtn" class="scroll-btn">&#9660;</button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Arjun Sivkumar</p>
+        </div>
+    </footer>
+</body>
+
+</html>
