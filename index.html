@@ -64,12 +64,19 @@
 
     <section id="experiences" class="container">
         <h2>Experience</h2>
-        <div class="project" onclick="toggleDetails('exp')">
+        <div class="project pe-0" onclick="toggleDetails('exp')">
             <div class="d-flex justify-content-between">
-                <h3>Full Stack Developer Intern</h3>
-                <h4 class="me-5" ><b>August 2023 - December 2023</b></h4>
+                <div class="exp-headers d-flex flex-column justify-content-center">
+                    <h3>Full Stack Developer Intern</h3>
+                    <h4 class="me-5" >August 2023 - December 2023</h4>
+                    <h4><i>Computer Solutions East Inc.</i></h4>
+                </div>
+                <a href="https://github.com/Arjunsivakumar28/QBO_Payments_App_Trial" target="_blank" class="project-link">
+                    <img src="/Images/payments_app_screen.png" alt="payemnts_app_img" class="project-image">
+                    <div class="new-tab-icon"><img src="/Images/external-link-svgrepo-com.svg" class="external-link"></div>
+                </a>
             </div>
-            <h4><i>Computer Solutions East Inc.</i></h4>
+            <br>
             <button id="experience-details-btn" class="details-btn">&#9660;</button>
             <div class="details" id="exp1">
                 <h6>During my internship at Computer Solutions East Inc., I was involved in the development
@@ -95,8 +102,17 @@
 
     <section id="projects" class="container">
         <h2>Projects</h2>
-        <div class="project" onclick="toggleDetails('project1')">
-            <h3>Reverser Image Search Project</h3>
+        <div class="project pe-0" onclick="toggleDetails('project1')">
+            <div class="d-flex justify-content-between">
+                <div class="exp-headers d-flex flex-column justify-content-center">
+                    <h3>Reverser Image Search Project</h3>
+                </div>
+                <a href="https://github.com/Arjunsivakumar28/Reverse-Image-Search" target="_blank" class="project-link">
+                    <img src="/Images/cbir_bird.jpg" alt="cbir_bird_img" class="project-image">
+                    <div class="new-tab-icon"><img src="/Images/external-link-svgrepo-com.svg" class="external-link"></div>
+                </a>
+            </div>
+            <br>
             <button id="project-details-btn" class="details-btn">&#9660;</button>
             <div class="details" id="project1">
                 <h6>I led a project to develop a Content-Based Image Retrieval System capable of

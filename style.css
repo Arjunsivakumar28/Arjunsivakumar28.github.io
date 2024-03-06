@@ -111,7 +111,7 @@ section h2 {
 
 .details-btn {
     position: absolute;
-    top: 20px;
+    bottom: 0px;
     right: 10px;
     background-color: transparent;
     border: none;
@@ -122,6 +122,46 @@ section h2 {
 
 .details-btn.active {
     transform: rotate(180deg);
+}
+
+.project-link {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover .new-tab-icon {
+    opacity: .8;
+}
+
+.project-link:hover .project-image {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.new-tab-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #007bff;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.external-link {
+    width: 2em;
+}
+
+.project-image {
+    width: 25em; /* Adjust image width as needed */
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all .5s ease;
 }
 
 #skills {
@@ -147,7 +187,7 @@ section h2 {
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #d1d422; /* Default background color */
-    cursor: pointer;
+    cursor: default;
 }
 
 .skill-icon:hover {
