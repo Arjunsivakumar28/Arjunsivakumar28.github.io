@@ -1,10 +1,5 @@
 console.log("start")
 
-// function toggleDetails(projectId) {
-//     var project = document.getElementById(projectId);
-//     project.classList.toggle('active');
-// }
-
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('#main-nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -35,14 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('active')
             const details = this.nextElementSibling;
             details.classList.toggle('active');
-            // if (details.classList.contains('active')) {
-            //     this.innerHTML = '&#9650;'; // Up arrow
-            // } else {
-            //     this.innerHTML = '&#9660;'; // Down arrow
-            // }
         });
     });
     
+});
+
+const resumePreview = document.getElementById('resume-preview');
+
+resumePreview.addEventListener('click', function() {
+    const pdfSrc = resumePreview.querySelector('embed').src;
+    window.open(pdfSrc, '_blank');
 });
 
 

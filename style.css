@@ -83,6 +83,17 @@ section h2 {
     margin-bottom: 30px;
 }
 
+#resume-section {
+    margin-top: 20px;
+}
+
+#resume-preview {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    cursor: default;
+}
+
 
 .project {
     position: relative;
