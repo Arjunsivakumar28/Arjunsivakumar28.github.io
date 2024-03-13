@@ -58,7 +58,7 @@
         width: 15em; /* Adjust image width as needed */
     }
 
-    .container {
+    .container-lg {
         padding-right: 0 !important;
         padding-left: 0 !important;
         margin-left: 0 !important;
@@ -72,12 +72,24 @@
         margin-right: 0 !important;
     }
 
-    .container h2, div {
+    .container-lg h2, div {
         margin-left: .5em !important;
     }
 
-    .container p {
+    .container-lg p {
         margin-left: 1em !important;
+    }
+
+    .project div {
+        flex-direction: column-reverse;
+    }
+
+    .project div h3 {
+        margin-top: 1em;
+    }
+
+    .details {
+        overflow: scroll !important;
     }
 }
 
