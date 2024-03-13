@@ -32,14 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
             details.classList.toggle('active');
         });
     });
+
+    const resumePreview = document.getElementById('resume-preview');
+
+    resumePreview.addEventListener('click', function() {
+        const pdfSrc = resumePreview.querySelector('embed').src;
+        window.open(pdfSrc, '_blank');
+    });
     
 });
-
-const resumePreview = document.getElementById('resume-preview');
-
-resumePreview.addEventListener('click', function() {
-    const pdfSrc = resumePreview.querySelector('embed').src;
-    window.open(pdfSrc, '_blank');
-});
-
-
